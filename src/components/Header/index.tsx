@@ -1,7 +1,7 @@
 //será importado sem o default pq ajuda na parte do autoimport do vscode e na responsividade (mas os itens da pasta pages não podem ser exportados assim)
 import format from 'date-fns/format';
 import ptBR from 'date-fns/locale/pt-BR'; //para ver os formatos https://date-fns.org/v2.21.1/docs/format
-
+import Link from 'next/link';
 import styles from './styles.module.scss';
 
 export function Header() {
@@ -11,9 +11,11 @@ export function Header() {
 
   return (
     <header className={styles.headerContainer}>
-      <a href="/">
-        <img src="/logo.svg" alt="PodCastr" />
-      </a>
+      <Link href="/">
+        <a>
+          <img src="/logo.svg" alt="PodCastr" />
+        </a>
+      </Link>
 
       <p>O Melhor para você ouvir</p>
 
